@@ -100,8 +100,8 @@ Make sure you have the following installed on your machine:
 **Cloning the Repository**
 
 ```bash
-git clone https://github.com/JavaScript-Mastery-Pro/classroom.git
-cd classroom
+git clone https://github.com/AmpatzidisSavvas/University-Dashboard-Management-Frontend-.git
+cd classroom-frontend
 ```
 
 **Installation**
@@ -126,8 +126,7 @@ VITE_CLOUDINARY_UPLOAD_PRESET=
 VITE_CLOUDINARY_UPLOAD_URL=
 ```
 
-Replace the placeholder values with your real credentials. You can get these by signing up at: [**Cloudinary**](https://jsm.dev/pern-cloudinary).
-
+Replace the placeholder values with your real credentials. You can get these by signing up at: [**Cloudinary**].
 **Running the Project**
 
 ```bash
