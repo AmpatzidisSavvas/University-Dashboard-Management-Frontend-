@@ -1,6 +1,5 @@
 import {
   Refine,
-  GitHubBanner,
   WelcomePage,
   Authenticated,
 } from "@refinedev/core";
