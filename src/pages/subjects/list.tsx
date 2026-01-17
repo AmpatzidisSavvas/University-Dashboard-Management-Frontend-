@@ -82,20 +82,22 @@ const SubjectsList = () => {
           ),
         },
       ],
-      []
+      [],
     ),
     refineCoreProps: {
       resource: "subjects",
       pagination: { pageSize: 10, mode: "server" },
       filters: {
-        permanent: [...departmentFilters, ...searchFilters ],
+        permanent: [...departmentFilters, ...searchFilters],
       },
-      sorters: {  initial: [
+      sorters: {
+        initial: [
           {
             field: "id",
             order: "desc",
           },
-        ],},
+        ],
+      },
     },
   });
 
@@ -130,7 +132,7 @@ const SubjectsList = () => {
               <SelectContent>
                 <SelectItem value="all">All Deparments</SelectItem>
                 {DEPARTMENT_OPTIONS.map((deparment) => (
-                  <SelectItem value={deparment.value}>
+                  <SelectItem key={deparment.value} value={deparment.value}>
                     {deparment.label}
                   </SelectItem>
                 ))}
