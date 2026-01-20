@@ -29,6 +29,8 @@ import { Loader2 } from "lucide-react";
 import { classSchema } from "@/lib/schema";
 import { Subject, User } from "@/types";
 import z from "zod";
+import UploadWidget from "@/components/upload-widget";
+import { teachers } from "@/constants";
 
 const ClassesCreate = () => {
   const back = useBack();
@@ -124,7 +126,31 @@ const ClassesCreate = () => {
                         Banner Image <span className="text-orange-600">*</span>
                       </FormLabel>
                       <FormControl>
-                        UploadWidget
+                        <UploadWidget
+                          value={
+                            field.value
+                              ? {
+                                  url: field.value,
+                                  publicId: bannerPublicId ?? "",
+                                }
+                              : null
+                          }
+                          onChange={(file) => {
+                            if (file) {
+                              field.onChange(file.url);
+                              form.setValue("bannerCldPubId", file.publicId, {
+                                shouldValidate: true,
+                                shouldDirty: true,
+                              });
+                            } else {
+                              field.onChange("");
+                              form.setValue("bannerCldPubId", "", {
+                                shouldValidate: true,
+                                shouldDirty: true,
+                              });
+                            }
+                          }}
+                        />
                       </FormControl>
                       <FormMessage />
                       {errors.bannerCldPubId && !errors.bannerUrl && (
