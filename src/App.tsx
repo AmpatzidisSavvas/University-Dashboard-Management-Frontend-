@@ -38,6 +38,9 @@ function App() {
               notificationProvider={useNotificationProvider()}
               routerProvider={routerProvider}
               options={{
+                title:{
+                  text: "Classroom Management"
+                },
                 syncWithLocation: true,
                 warnWhenUnsavedChanges: true,
                 projectId: "6dGQra-aO1NMd-peMNYO",

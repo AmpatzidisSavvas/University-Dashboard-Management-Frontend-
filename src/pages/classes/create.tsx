@@ -30,7 +30,6 @@ import { classSchema } from "@/lib/schema";
 import { Subject, User } from "@/types";
 import z from "zod";
 import UploadWidget from "@/components/upload-widget";
-import { teachers } from "@/constants";
 
 const ClassesCreate = () => {
   const back = useBack();
