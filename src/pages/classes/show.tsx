@@ -137,8 +137,7 @@ const ClassesShow = () => {
           classDetails.bannerCldPubId ? (
             <AdvancedImage
               cldImg={bannerPhoto(
-                classDetails.bannerCldPubId ?? "",
-                classDetails.name
+                classDetails.bannerCldPubId ?? ""
               )}
               alt="Class Banner"
             />
