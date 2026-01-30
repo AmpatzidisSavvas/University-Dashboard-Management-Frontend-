@@ -1,15 +1,11 @@
 import {
-  Refine,
-  WelcomePage,
-  Authenticated,
+  Refine
 } from "@refinedev/core";
 import { DevtoolsPanel, DevtoolsProvider } from "@refinedev/devtools";
 import { RefineKbar, RefineKbarProvider } from "@refinedev/kbar";
 
 import { BrowserRouter, Route, Routes, Outlet } from "react-router";
 import routerProvider, {
-  NavigateToResource,
-  CatchAllNavigate,
   UnsavedChangesNotifier,
   DocumentTitleHandler,
 } from "@refinedev/react-router";
@@ -20,13 +16,16 @@ import { Toaster } from "./components/refine-ui/notification/toaster";
 import { ThemeProvider } from "./components/refine-ui/theme/theme-provider";
 import "./App.css";
 import Dashboard from "./pages/dashboard";
-import { BookOpen, GraduationCap, Home } from "lucide-react";
+import { BookOpen, Building2, GraduationCap, Home } from "lucide-react";
 import SubjectsList from "./pages/subjects/list";
 import SubjectsCreate from "./pages/subjects/create";
 import SubjectsShow from "./pages/subjects/show";
 import ClassesList from "./pages/classes/list";
 import ClassesCreate from "./pages/classes/create";
 import ClassesShow from "./pages/classes/show";
+import DepartmentsList from "./pages/departments/list";
+import DepartmentsCreate from "./pages/departments/create";
+import DepartmentShow from "./pages/departments/show";
 
 function App() {
   return (
@@ -40,7 +39,7 @@ function App() {
               routerProvider={routerProvider}
               options={{
                 title:{
-                  text: "Classroom Management"
+                  text: "University Management"
                 },
                 syncWithLocation: true,
                 warnWhenUnsavedChanges: true,
@@ -65,6 +64,16 @@ function App() {
                   show:"classes/show/:id",
                   meta: { label: "Classes", icon: <GraduationCap /> },
                 },
+                {
+                  name: "departments",
+                  list: "/departments",
+                  show: "/departments/show/:id",
+                  create: "/departments/create",
+                  meta: {
+                    label: "Departments",
+                    icon: <Building2 />,
+                  },
+                }
               ]}
             >
               <Routes>
@@ -85,6 +94,11 @@ function App() {
                     <Route index element={<ClassesList />} />
                     <Route path="create" element={<ClassesCreate />} />
                     <Route path="show/:id" element={<ClassesShow />} />
+                  </Route>
+                  <Route path="departments">
+                    <Route index element={<DepartmentsList />} />
+                    <Route path="create" element={<DepartmentsCreate />} />
+                    <Route path="show/:id" element={<DepartmentShow />} />
                   </Route>
                 </Route>
               </Routes>

@@ -10,8 +10,6 @@
 <img src="https://img.shields.io/badge/-Better--Auth-000?style=for-the-badge&logo=Auth0&logoColor=white" /> <br/>
 <img src="https://img.shields.io/badge/-Cloudinary-3448C5?style=for-the-badge&logo=Cloudinary&logoColor=white" />
 <img src="https://img.shields.io/badge/-Arcjet-34388F?style=for-the-badge&logo=Arcjet&logoColor=white" /> 
-<img src="https://img.shields.io/badge/-Site24x7-26CD66?style=for-the-badge&logo=Site24x7&logoColor=white" />
-<img src="https://img.shields.io/badge/-CodeRabbit-FC5D13?style=for-the-badge&logo=CodeRabbit&logoColor=white" /> 
 
   <h3 align="center">(Frontend) University Dashboard Management</h3>
 
